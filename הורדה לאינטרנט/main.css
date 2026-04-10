@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(
+    to top left,
+    rgba(156,255,73,0.8),
+    rgba(73,156,255,0.4),
+    rgba(255,73,156,0.6)
+    );
+    background-attachment: fixed;
+}
+#secret-word {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+.p-main{
+    font-size: 200%;
+    margin-top: -20px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(73, 76, 252);
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    width: 50vw;
+    height: 70vh;
+    margin: auto;
+    margin-top: 4%;
+}
+#hangman-design{
+    color: red;
+    font-size: 110%;
+}
+#start-game{
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+}
+#tree{
+    font-size: 50px;
+    margin-top: -28%;
+    margin-left: 4%;
+    color: rgb(154, 22, 200);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name="description" content="במה האתר שלי עוסק"> <!--לצורך דפדפן החיפוש, ככה ידעו במה אני מתעסק ויקשרו אותי לחיפושים רלוונטים-->
+    <meta name="keywords" content="מילות מפתח שקשורות לתוכן שבאתר"> <!--קישור האתר למילות מפתח רלוונטיות-->
+    <title>Hangman Game</title>
+    <link rel='stylesheet' href='main.css'>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <py-config>
+    [[fetch]]
+    files = ["words.txt"]
+    </py-config>
+    <script type="py" src="Hangman.py"></script>
+    
+</head>
+<body>
+    <div id="container">
+            <h1>welcome to Hangman Game!</h1>
+
+        <pre id="hangman-design">
+      _    _                                         
+     | |  | |                                        
+     | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
+     |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+     | |  | | (_| | | | | (_| | | | | | | (_| | | | |
+     |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                          __/ |                      
+                         |___/
+        </pre>
+        <button id="play-again" py-click="reset_game">press here if you want try again</button>
+    <p id="remaining-attempts" class="p-main">remaining attempts: 6</p>
+    <p id="letters-guessed" class="p-main">letter that you guessed:</p>
+    <p id="secret-word" class="p-main"></p>
+    
+        <div id="main-div">
+            <div><input type="text" name="guess" id="guess-letter" py-keydown="handle_keypress" placeholder="הכנס אות" maxlength="1"></div>
+            <div><button id="start-game" py-click="start_game">guess a letter (or press Enter)</button></div>
+        </div>
+    </div>
+    <p id="tree"></p>
+
+</body>
+</html>
+
